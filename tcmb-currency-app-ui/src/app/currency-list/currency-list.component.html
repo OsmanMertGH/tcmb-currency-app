@@ -1,0 +1,40 @@
+<div class="card-container" style="margin-top: -15px;">
+     <input class="dateInput"  type="date" id="selectedDate" [(ngModel)]="selectedDate" useValueAsDate /> 
+     <button class="searchButton" (click)="search()">GETİR</button>
+</div>
+<div *ngIf="showCurrencies; else message" class="card-container">
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <strong>Döviz Kodu</strong><br>Currency Code</th>
+                    <th>
+                    <strong>Döviz Cinsi</strong><br>Currency</th>
+                    <th>
+                    <strong>Döviz Alış</strong><br>Forex Buying</th>
+                    <th>
+                    <strong>Döviz Satış</strong><br>Forex Selling</th>
+                    <th>
+                    <strong>Efektif Alış</strong><br>Banknote Buying</th>
+                    <th>
+                    <strong>Efektif Satış</strong><br>Banknote Selling</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let currency of currencies">
+                <td>{{ currency.currencyCode }}</td>
+                <td>{{ currency.currencyName }}</td>
+                <td>{{ currency.forexBuying }}</td>
+                <td>{{ currency.forexSelling }}</td>
+                <td>{{ currency.banknoteBuying }}</td>
+                <td>{{ currency.banknoteSelling }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="message-container">
+<ng-template #message>
+    <h3>{{resultMessage}}</h3>
+</ng-template>
+</div>

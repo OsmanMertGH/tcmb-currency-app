@@ -1,0 +1,63 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+  }
+  
+  th {
+    background-color: #aca7a7;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2; 
+  }
+  
+  tr:hover {
+    background-color: #ddd; 
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  .searchButton{
+    margin-left: 10px;
+    background-color: #38aed2; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 22px;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .dateInput{
+    width: 150px;
+    font-weight: bold;
+    font-size: 17px;
+    height: 50px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: auto;
+    padding: auto;
+  }
+
+  .message-container {
+    display: grid;
+    place-items: center;
+    height: 50vh;
+    text-align: center;
+    font-size: 25px;
+}
