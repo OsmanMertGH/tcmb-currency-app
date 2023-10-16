@@ -1,0 +1,34 @@
+server:
+  port: 8080
+  servlet:
+    session:
+      cookie:
+        http-only: true
+  error:
+    include-stacktrace: never
+
+springdoc:
+  swagger-ui:
+    path: /docs
+
+spring:
+  application:
+    name: currency-service
+  devtools:
+    restart:
+      enabled: true
+  output:
+    ansi:
+      enabled: always
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      show_sql: true
+      format_sql: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgr123
